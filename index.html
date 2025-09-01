@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema de Deméritos Estudiantiles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        background-color: #0d6efd; /* Azul institucional */
+        color: white;
+      }
+      h1 {
+        font-weight: bold;
+        margin-top: 20px;
+      }
+      .navbar {
+        background-color: #084298 !important; /* Azul más oscuro */
+    }
+      .banner {
+        width: 100%;
+        max-height: 180px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Banner superior -->
+    <img class="img-fluid banner" src="banner.jpeg" alt="Banner Institucional">
+
+    <!-- Navbar con botón desplegable -->
+    <nav class="navbar navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbarToggleExternalContent" 
+                aria-controls="navbarToggleExternalContent" aria-expanded="false" 
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Contenido colapsable -->
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-primary p-4 text-white text-center">
+        <h5 class="h4">Iniciar Sesión</h5>
+        
+        <!-- Formulario de login -->
+        <form action="validarlogin.php" method="POST" class="mt-3">
+          <div class="mb-3">
+            <input type="text" class="form-control" name="usuario" placeholder="Usuario" required>
+          </div>
+          <div class="mb-3">
+            <input type="password" class="form-control" name="password" placeholder="Contraseña" required>
+          </div>
+          <button type="submit" class="btn btn-light w-100">Ingresar</button>
+        </form>
+        
+        <!-- Opción Google -->
+        <div class="mt-3">
+          <a href="#" class="btn btn-danger w-100">
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" 
+                 alt="Google" width="20" class="me-2">
+            Ingresar con Google
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Título central -->
+    <div class="container text-center">
+      <h1>Sistema de Deméritos Estudiantiles</h1>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
